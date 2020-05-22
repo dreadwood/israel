@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 0 10px 0;
+  padding: 32px 15px 10px 15px;
 
   font-family: $font-deafult;
   font-size: 15px;
@@ -37,8 +37,10 @@
   font-size: 15px;
   line-height: 18px;
   font-weight: 500;
+  color: $main-black;
   text-transform: uppercase;
 
+  background-color: $white;
   border: none;
   border-bottom: 1px dashed $main-black;
   cursor: pointer;
@@ -48,5 +50,33 @@
     color: $yellow;
 
     border-color: $yellow;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-header {
+    position: relative;
+
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px 9px 10px 16px;
+  }
+
+  .page-header__tel {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+  }
+
+  .page-header__link {
+    font-size: 14px;
+    line-height: 17px;
   }
 }

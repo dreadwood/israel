@@ -8,15 +8,21 @@
 @mixin wrapper {
   margin: 0 auto;
 
-  @media (min-width: $mobile-width) {
-    width: $mobile-width;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: auto;
-  }
-
   @media (min-width: $max-width) {
     width: $max-width;
   }
+
+  @media (max-width: $max-width) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: $mobile-width;
+  }
+
+  // @media (min-width: $tablet-width) {
+  //   width: auto;
+  // }
+
+
 }
