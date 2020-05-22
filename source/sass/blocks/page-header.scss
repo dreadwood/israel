@@ -1,3 +1,52 @@
 .page-header {
+  @include wrapper;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0 10px 0;
+
+  font-family: $font-deafult;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: left;
+  color: $main-black;
+}
+
+.page-header__tel {
+  display: block;
+
+  color: $main-black;
+
+  &:hover,
+  &:focus {
+    color: $yellow;
+  }
+}
+
+.page-header__logo {
+
+}
+
+.page-header__link {
+  padding: 0;
+
+  font-family: $font-deafult;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  border: none;
+  border-bottom: 1px dashed $main-black;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $yellow;
+
+    border-color: $yellow;
+  }
 }

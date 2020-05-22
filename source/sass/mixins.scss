@@ -16,7 +16,7 @@
     width: auto;
   }
 
-  @media (min-width: $desktop-width) {
-    width: $desktop-width;
+  @media (min-width: $max-width) {
+    width: $max-width;
   }
 }
