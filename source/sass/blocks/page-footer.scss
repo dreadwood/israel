@@ -31,36 +31,6 @@
   opacity: 0.5;
 }
 
-.page-footer__social-list {
-  @include reset-list;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.page-footer__social-item {
-  margin-left: 20px;
-
-  &:first-child {
-    margin-left: 0;
-  }
-}
-
-.page-footer__social-item a {
-  display: block;
-  // width: 24px;
-  // height: 24px;
-}
-
-.page-footer__social-item svg {
-  fill: transparentize($black, 0.84);
-
-  &:hover,
-  &:focus {
-    fill: $yellow;
-  }
-}
-
 @media (max-width: $mobile-width-only) {
   .page-footer__wrapper {
     flex-direction: column;

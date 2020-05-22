@@ -1,0 +1,36 @@
+.callback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: $font-deafult;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($main-black, 0.5);
+}
+
+.callback__wrapper {
+  width: 345px;
+}
+
+.callback__text {
+  margin: 0;
+
+  &--bold {
+    margin-bottom: 12px;
+
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 500;
+    color: transparentize($main-black, 0.13);
+  }
+}
+
+.callback__form {
+  display: flex;
+  justify-content: space-between;
+  width: 764px;
+}

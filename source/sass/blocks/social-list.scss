@@ -1,0 +1,28 @@
+.social-list {
+  @include reset-list;
+
+  display: flex;
+}
+
+.social-list li {
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.social-list a {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.social-list svg {
+  fill: transparentize($black, 0.84);
+
+  &:hover,
+  &:focus {
+    fill: $yellow;
+  }
+}

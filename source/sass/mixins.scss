@@ -5,6 +5,16 @@
   list-style: none;
 }
 
+@mixin pseudo {
+  content: "";
+
+  position: absolute;
+
+  display: block;
+
+  background-repeat: no-repeat;
+}
+
 @mixin wrapper {
   margin: 0 auto;
 

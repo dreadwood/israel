@@ -13,9 +13,16 @@ $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 $gradient: linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
+$gradient-btn: linear-gradient(142.39deg, #FFC341 20.46%, #FFD701 65.31%);
+$gradient-btn-hover: linear-gradient(143.55deg, #FFC341 -50.3%, #FFD701 63.1%);
+$gradient-btn-click:
+  radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%),
+  linear-gradient(143.55deg, #FFC341 -50.3%, #FFD701 63.1%);
+
 $red: #FF0000;
 $yellow: #FFC341;
 $blue: #1FC0FC;
+$gray: #E3E3E3;
 $main-black: #484848;
 
 $black: #000000;

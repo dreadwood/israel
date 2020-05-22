@@ -1,0 +1,13 @@
+.contact {
+  @include wrapper;
+
+  padding: 0 15px 70px 15px;
+}
+
+.contact__curator {
+  margin-bottom: 64px;
+}
+
+.contact__callback {
+  @include wrapper;
+}

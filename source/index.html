@@ -20,7 +20,103 @@
   </header>
 
   <main class="page-main">
+    <h1 class="visually-hidden">Стажировки в Израиль - проект MASA</h1>
+    <section class="main-banner">
+      <p class="main-banner__text">Учёба, путешествие и карьера для еврейской молодёжи</p>
+    </section>
 
+    <section>
+      <!-- Программы -->
+    </section>
+
+    <section>
+      <!-- Хочу поехать и как поехать -->
+    </section>
+
+    <section>
+      <!-- Жизнь в израиле -->
+    </section>
+
+    <section>
+      <!-- Реклама инсты -->
+    </section>
+
+    <section>
+      <!-- Вопросы -->
+    </section>
+
+    <section>
+      <!-- Отзывы -->
+    </section>
+
+    <section class="contact">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contact__curator curator">
+        <div class="curator__wrapper">
+          <p class="curator__title title">Узнать подробности</p>
+          <div class="curator__city">
+            <p>Ваш город:</p>
+            <button type="button">Новосибирск</button>
+          </div>
+          <div class="curator__person">
+            <img class="curator__photo" src="img/curator@1x.jpg" alt="Фотография куратора Анны Горелик">
+            <div class="curator__person-wrapper">
+              <p class="curator__name">
+                <span>Ваш куратор:</span>
+                Анна Горелик
+              </p>
+              <p class="curator__address">Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
+
+              <ul class="curator__social-list social-list">
+                <li>
+                  <a href="#">
+                    <span class="visually-hidden">Фейсбук</span>
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-fb"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="visually-hidden">Вотсап</span>
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-whatsapp"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="visually-hidden">Телеграм</span>
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="curator__text">Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !</p>
+        </div>
+
+        <div class="curator__map"></div>
+      </div>
+
+      <div class="contact__callback callback">
+        <div class="callback__wrapper">
+          <p class="callback__text callback__text--bold">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+          <p class="callback__text">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
+        </div>
+        <form class="callback__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+          <label class="visually-hidden" for="callback__name">Имя</label>
+          <input class="input" id="callback__name" type="text" name="name" placeholder="Имя">
+
+          <label class="visually-hidden" for="callback__tel">Email</label>
+          <input class="input input--tel" id="callback__tel" type="tel" name="tel" pattern="[0-9]*" minlength="10" placeholder="+7 (923) 41">
+
+          <button class="button" type="submit">Перезвоните мне</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -29,8 +125,8 @@
         <img src="img/logo-footer@1x.png" width="85" height="27" alt="Логотип компании «MASA»">
       </a>
       <p class="page-footer__copyright">Copyright someDesignCompany ©2019</p>
-      <ul class="page-footer__social-list">
-        <li class="page-footer__social-item">
+      <ul class="page-footer__social-list social-list">
+        <li>
           <a href="#">
             <span class="visually-hidden">Фейсбук</span>
             <svg width="24" height="24">
@@ -38,7 +134,7 @@
             </svg>
           </a>
         </li>
-        <li class="page-footer__social-item">
+        <li>
           <a href="#">
             <span class="visually-hidden">Твиттер</span>
             <svg width="24" height="24">
@@ -46,7 +142,7 @@
             </svg>
           </a>
         </li>
-        <li class="page-footer__social-item">
+        <li>
           <a href="#">
             <span class="visually-hidden">Инстаграмм</span>
             <svg width="24" height="24">

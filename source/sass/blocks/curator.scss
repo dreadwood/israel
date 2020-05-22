@@ -1,0 +1,145 @@
+.curator {
+  display: flex;
+
+  font-family: $font-deafult;
+  font-size: 17px;
+  line-height: 29px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($main-black, 0.13);
+}
+
+.curator__wrapper {
+  width: 520px;
+  margin-right: 35px;
+}
+
+.curator__title {
+  margin-bottom: 48px;
+}
+
+.curator__city {
+  display: flex;
+  margin-bottom: 39px;
+  padding: 0 6px;
+}
+
+.curator__city  p {
+  position: relative;
+
+  margin: 0;
+  margin-right: 16px;
+  margin-left: 20px;
+
+  font-size: 15px;
+  line-height: 22px;
+  color: transparentize($main-black, 0.26);
+
+  &::before {
+    @include pseudo;
+
+    top: 0;
+    left: -18px;
+
+    width: 12px;
+    height: 18px;
+
+    background-image: url("../img/icon-point@1x.png");
+  }
+}
+
+.curator__city button {
+  position: relative;
+
+  padding: 0;
+
+  font-family: $font-deafult;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($main-black, 0.26);
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dashed $blue;
+  cursor: pointer;
+
+  &::before {
+    @include pseudo;
+
+    top: 2px;
+    right: -25px;
+
+    width: 16px;
+    height: 15px;
+
+    background-image: url("../img/icon-arrow@1x.png");
+  }
+}
+
+.curator__person {
+  display: flex;
+  align-items: flex-start;
+}
+
+.curator__photo {
+  margin-right: 20px;
+
+  border-radius: 50%;
+}
+
+.curator__person-wrapper {
+  width: 260px;
+  margin-bottom: 32px;
+}
+
+.curator__name {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-size: 15px;
+  line-height: 22px;
+  color: transparentize($main-black, 0.26);
+}
+
+.curator__name span {
+    color: $blue;
+  }
+
+.curator__address {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-size: 13px;
+  line-height: 19px;
+  color: transparentize($main-black, 0.26);
+}
+
+.curator__social-list li {
+  margin-left: 12px;
+}
+
+
+.curator__text {
+  margin: 0;
+}
+
+.curator__map {
+  position: relative;
+
+  &::before {
+    @include pseudo;
+
+    top: 0;
+    left: 0;
+
+    width: 702px;
+    height: 448px;
+
+    background-image: url("../img/map-desktop@1x.jpg");
+  }
+}
