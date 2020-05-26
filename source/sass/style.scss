@@ -3,15 +3,19 @@
 @import "mixins.scss";
 @import "visually-hidden.scss";
 @import "global.scss";
-
+// repeating block
 @import "blocks/button.scss";
 @import "blocks/input.scss";
 @import "blocks/title.scss";
 @import "blocks/social-list.scss";
-
+@import "blocks/list-button.scss";
+// block
 @import "blocks/page-header.scss";
 @import "blocks/main-banner.scss";
 @import "blocks/page-main.scss";
+@import "blocks/project.scss";
+@import "blocks/about-program.scss";
+@import "blocks/programs.scss";
 @import "blocks/contact.scss";
 @import "blocks/curator.scss";
 @import "blocks/callback.scss";

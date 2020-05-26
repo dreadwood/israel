@@ -14,7 +14,10 @@
   <header class="page-header">
     <a class="page-header__tel" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
     <a class="page-header__logo">
-      <img src="img/logo-header@1x.png" width="137" height="48" alt="Логотип компании «MASA»">
+      <picture>
+        <source media="(max-width:767px)" srcset="img/logo-header-mobile@1x.png" >
+        <img src="img/logo-header-desktop@1x.png" width="137" height="48" alt="Логотип компании «MASA»">
+      </picture>
     </a>
     <button class="page-header__link">заказать звонок</button>
   </header>
@@ -25,8 +28,53 @@
       <p class="main-banner__text">Учёба, путешествие и карьера для еврейской молодёжи</p>
     </section>
 
-    <section>
-      <!-- Программы -->
+    <section class="project">
+
+      <div class="project__about">
+        <div class="about-program">
+          <h2 class="about-program__title title">О программе</h2>
+          <p class="about-program__text">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+          <video class="about-program__video" controls width="870" height="460" poster="img/video-desktop@1x.jpg" preload="none">
+            <source src="https://ia801602.us.archive.org/11/items/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="project__programs">
+        <div class="programs">
+          <h2 class="programs__title title">Программы</h2>
+          <div class="programs__wrapper">
+            <div class="programs__list list-button">
+              <ul class="list-button__list">
+                <li>
+                  <button class="list-button__item list-button__item--general" type="button">Общие</button>
+                </li>
+                <li>
+                  <button class="list-button__item list-button__item--academic list-button__item--active"  type="button">Академические</button>
+                </li>
+                <li>
+                  <button class="list-button__item list-button__item--internship" type="button">Стажировки</button>
+                </li>
+                <li>
+                  <button class="list-button__item list-button__item--volunteer" type="button">Волонтёрство</button>
+                </li>
+                <li>
+                  <button class="list-button__item list-button__item--religion" type="button">Религиозные</button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="programs__item-list">
+              <div class="programs__item">
+                <h3  class="programs__item-title">Академические</h3>
+                <p class="programs__item-text">Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.</p>
+                <p class="programs__item-text">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и&nbsp;делового администрирования или искусства? Здесь, в Израиле, Вы сможете&nbsp;изучить все это в удивительной университетской среде.</p>
+              </div>
+              <!-- add 4 programs__item -->
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
@@ -95,10 +143,12 @@
               </ul>
             </div>
           </div>
-          <p class="curator__text">Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !</p>
+          <p class="curator__text">Куратор является опытным специалистом агентства Сохнут и&nbsp;знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте&nbsp;подробнее о программах и выберите свою !</p>
         </div>
 
-        <div class="curator__map"></div>
+        <div class="curator__map">
+            <img class="curator__map-img" src="../img/map-desktop@1x.png" width="702" height="448" alt="Карта офиса: Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
+        </div>
       </div>
 
       <div class="contact__callback callback">
@@ -106,14 +156,15 @@
           <p class="callback__text callback__text--bold">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
           <p class="callback__text">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
         </div>
-        <form class="callback__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
-          <label class="visually-hidden" for="callback__name">Имя</label>
-          <input class="input" id="callback__name" type="text" name="name" placeholder="Имя">
 
-          <label class="visually-hidden" for="callback__tel">Email</label>
+        <form class="callback__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+          <label class="visually-hidden" for="callback__name">имя</label>
+          <input class="input" id="callback__name" type="text" name="name" placeholder="имя">
+
+          <label class="visually-hidden" for="callback__tel">телефон</label>
           <input class="input input--tel" id="callback__tel" type="tel" name="tel" pattern="[0-9]*" minlength="10" placeholder="+7 (923) 41">
 
-          <button class="button" type="submit">Перезвоните мне</button>
+          <button class="callback__button button" type="submit">перезвоните мне</button>
         </form>
       </div>
     </section>

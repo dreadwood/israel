@@ -1,17 +1,17 @@
 .button {
   display: block;
   min-width: 216px;
-  padding: 19px 10px 20px 10px;
+  padding: 16px 10px 19px 10px;
 
   font-family: $font-deafult;
-  font-size: 17px;
-  line-height: 20px;
+  font-size: 21px;
+  line-height: 24px;
   font-weight: 500;
   font-style: normal;
   text-align: center;
   color: $white;
-  text-transform: uppercase;
-  text-shadow: 0px 1px 4px transparentize($black, 0.88);
+  text-shadow: 0 1px 4px transparentize($black, 0.88);
+  font-variant: small-caps;
 
   background-image: $gradient-btn;
   border: none;

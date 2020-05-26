@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 15px 10px 15px;
+  padding: 32px 19px 10px 15px;
 
   font-family: $font-deafult;
   font-size: 15px;
@@ -26,21 +26,17 @@
   }
 }
 
-.page-header__logo {
-
-}
-
 .page-header__link {
   padding: 0;
 
   font-family: $font-deafult;
-  font-size: 15px;
+  font-size: 19px;
   line-height: 18px;
   font-weight: 500;
   color: $main-black;
-  text-transform: uppercase;
+  font-variant: small-caps;
 
-  background-color: $white;
+  background-color: transparent;
   border: none;
   border-bottom: 1px dashed $main-black;
   cursor: pointer;
@@ -63,10 +59,15 @@
   }
 
   .page-header__tel {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .page-header__logo img {
+    width: 120px;
+    height: 42px;
   }
 
   .page-header__logo {
@@ -76,7 +77,7 @@
   }
 
   .page-header__link {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 18px;
+    line-height: 20px;
   }
 }

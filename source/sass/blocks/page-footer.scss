@@ -18,11 +18,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 24px 15px 24px 15px;
-}
-
-.page-footer__logo {
-
+  padding: 26px 19px 17px 14px;
 }
 
 .page-footer__copyright {
@@ -48,5 +44,15 @@
   .page-footer__social-list {
     margin: 0 auto;
     flex-wrap: wrap;
+  }
+
+  .page-footer__social-list a {
+    width: 32px;
+    height: 32px;
+  }
+
+  .page-footer__social-list svg {
+    width: 32px;
+    height: 32px;
   }
 }

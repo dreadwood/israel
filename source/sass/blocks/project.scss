@@ -1,0 +1,25 @@
+.project__about {
+  background-image: url("../img/watercolor-project-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left 0 bottom 0;
+}
+
+.project__programs {
+  background-image: url("../img/bg-programs-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right 1px top 56px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .project__about {
+    background-image: url("../img/watercolor-project-mobile@1x.jpg");
+    background-position: right 0 top 200px;
+  }
+
+  .project__programs {
+    background-image: url("../img/bg-programs-mobile@1x.png");
+    background-position: right 0 top 198px;
+  }
+}

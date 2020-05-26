@@ -1,7 +1,8 @@
 .callback {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding: 0 19px 0 15px;
 
   font-family: $font-deafult;
   font-size: 13px;
@@ -14,6 +15,7 @@
 
 .callback__wrapper {
   width: 345px;
+  padding-top: 5px;
 }
 
 .callback__text {
@@ -32,5 +34,75 @@
 .callback__form {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   width: 764px;
+}
+
+.callback__form input {
+  width: 250px;
+  margin-right: 4px;
+}
+
+@media (max-width: $tablet-width-only) {
+  .callback {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .callback__wrapper {
+    width: auto;
+  }
+
+  .callback__text {
+    margin-bottom: 35px;
+
+    &--bold {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .callback {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .callback__wrapper {
+    margin-bottom: 0;
+  }
+
+  .callback__text {
+    font-size: 13px;
+    line-height: 19px;
+
+    &--bold {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .callback__form {
+    flex-direction: column;
+    align-items: center;
+    width: 288px;
+  }
+
+  .callback__form input {
+    width: 288px;
+
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      margin-bottom: 24px;
+    }
+  }
+
+  .callback__form button {
+    width: 264px;
+    margin: 0 auto;
+  }
 }

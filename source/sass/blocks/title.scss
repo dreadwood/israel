@@ -9,3 +9,10 @@
   text-transform: uppercase;
   letter-spacing: -0.02em;
 }
+
+@media (max-width: $mobile-width-only) {
+  .title {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}

@@ -1,0 +1,140 @@
+.list-button__list {
+  @include reset-list;
+}
+
+.list-button li {
+  margin-bottom: 4px;
+}
+
+.list-button__item {
+  position: relative;
+
+  display: block;
+  min-width: 228px;
+  padding: 26px 10px 24px 72px;
+
+  font-family: $font-deafult;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($main-black, 0.13);
+  text-shadow: 0 1px 4px transparentize($black, 0.88);
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    @include pseudo;
+
+    top: 16px;
+    left: 18px;
+
+    width: 36px;
+    height: 36px;
+  }
+
+  &--general::before {
+    background-image: url("../img/icon-star-black@1x.png");
+    background-position: 4px 3px;
+  }
+
+  &--academic::before {
+    background-image: url("../img/icon-hat-black@1x.png");
+  }
+
+  &--internship::before {
+    background-image: url("../img/icon-bag-black@1x.png");
+    background-position: 2px 6px;
+  }
+
+  &--volunteer::before {
+    background-image: url("../img/icon-hand-black@1x.png");
+    background-position: 2px 4px;
+  }
+
+  &--religion::before {
+    background-image: url("../img/icon-menorah-black@1x.png");
+    background-position: 6px 6px;
+  }
+
+  &:hover:not(&--active),
+  &:focus:not(&--active) {
+    color: $yellow;
+  }
+
+  &--general:hover::before,
+  &--general:focus::before {
+    background-image: url("../img/icon-star-yellow@1x.png");
+  }
+
+  &--academic:hover::before,
+  &--academic:focus::before {
+    background-image: url("../img/icon-hat-yellow@1x.png");
+  }
+
+  &--internship:hover::before,
+  &--internship:focus::before {
+    background-image: url("../img/icon-bag-yellow@1x.png");
+  }
+
+  &--volunteer:hover::before,
+  &--volunteer:focus::before {
+    background-image: url("../img/icon-hand-yellow@1x.png");
+  }
+
+  &--religion:hover::before,
+  &--religion:focus::before {
+    background-image: url("../img/icon-menorah-yellow@1x.png");
+  }
+
+  &--active {
+    font-weight: 500;
+    color: $white;
+    text-transform: uppercase;
+
+    background: $gradient-btn-list;
+  }
+
+  &--active::before {
+    filter: invert(100%);
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .list-button {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .list-button__list {
+    display: flex;
+  }
+
+  .list-button li {
+    margin-bottom: 0;
+  }
+
+  .list-button__item {
+    min-width: auto;
+    padding: 16px 12px 14px 52px;
+
+    font-family: $font-deafult;
+    font-size: 15px;
+    line-height: 18px;
+
+    border-radius: 60.6704px;
+    opacity: 0.4;
+
+    &::before {
+      top: 6px;
+      left: 12px;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+}

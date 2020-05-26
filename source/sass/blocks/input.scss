@@ -1,10 +1,10 @@
 .input {
   display: block;
   min-width: 250px;
-  padding: 19px 30px 20px 40px;
+  padding: 19px 10px 16px 40px;
 
   font-family: $font-deafult;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 500;
   font-style: normal;
@@ -20,6 +20,7 @@
 
   &::placeholder {
     color: transparentize($main-black, 0.5);
+    font-variant: small-caps;
   }
 
   &:valid {
@@ -30,7 +31,7 @@
   &:focus {
 
     border-color: $yellow;
-    box-shadow: 0px 4px 4px transparentize($black, 0.75);
+    box-shadow: 0 4px 4px transparentize($black, 0.75);
   }
 
   &:invalid {
