@@ -1,0 +1,119 @@
+.callback-promo {
+  position: relative;
+
+  font-family: $font-deafult;
+  font-size: 17px;
+  line-height: 29px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($main-black, 0.13);
+
+  background-image: url("../img/bg-backpack-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: left 0 top 127px;
+}
+
+.callback-promo__wrapper {
+  @include wrapper;
+
+  padding: 14.71% 113px 11.71% 114px;
+}
+
+.callback-promo__content {
+  width: 477px;
+}
+
+.callback-promo__title {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.callback-promo__text {
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+.callback-promo__form {
+  position: relative;
+}
+
+.callback-promo__form input {
+  width: 100%;
+}
+
+.callback-promo__form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.callback-promo__img {
+  position: absolute;
+  right: 0;
+  bottom: 29px;
+  z-index: -1;
+
+  width: 59.88%;
+  height: auto;
+}
+
+@media (max-width: $mobile-width-only) {
+  .callback-promo {
+    background-image: url("../img/bg-backpack-mobile@1x.png");
+  }
+
+  .callback-promo__wrapper {
+    width: auto;
+
+    padding: 64px 0 40px 0;
+  }
+
+  .callback-promo__content {
+    width: auto;
+    padding: 0 16px;
+  }
+
+  .callback-promo__title {
+    text-align: center;
+  }
+
+  .callback-promo__text {
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .callback-promo__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .callback-promo__form input {
+    width: 287px;
+    margin-bottom: 8px;
+  }
+
+  .callback-promo__form button {
+    position: static;
+
+    width: 264px;
+  }
+
+  .callback-promo__img-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .callback-promo__img {
+    position: static;
+    width: 424px;
+    height: 308px;
+
+    object-fit: none;
+  }
+}
