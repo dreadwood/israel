@@ -1,4 +1,6 @@
 .conditions {
+  position: relative;
+
   font-family: $font-deafult;
   font-size: 15px;
   line-height: 26px;
@@ -6,4 +8,236 @@
   font-style: normal;
   text-align: left;
   color: transparentize($main-black, 0.13);
+
+  background-image:
+    url("../img/bg-stamp-desktop@1x.png"),
+    url("../img/watercolor-conditions-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size:
+    auto auto,
+    100% auto;
+  background-position:
+    right 0 top 340px,
+    left 0 top -69px;
+}
+
+.conditions__wrapper {
+  @include wrapper;
+
+  display: flex;
+  justify-content: flex-end;
+  padding: 11.9% 20px 12% 20px;
+}
+
+.conditions__img {
+  position: absolute;
+  top: 131px;
+  left: 12px;
+
+  width: 42.54%;
+  height: auto;
+}
+
+.conditions__content {
+  position: relative;
+  z-index: 1;
+
+  width: 551px;
+}
+
+.conditions__title {
+  margin-bottom: 24px;
+}
+
+.conditions__text {
+  width: 490px;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.conditions__text-bold {
+  margin: 0;
+  margin-bottom: 19px;
+
+  font-size: 17px;
+  line-height: 29px;
+  font-weight: 500;
+  color: $main-black;
+}
+
+.conditions__list {
+  @include reset-list;
+
+  position: relative;
+
+  width: 530px;
+  margin-bottom: 52px;
+  margin-left: -18px;
+
+  counter-reset: section;
+
+  &::before {
+    @include pseudo;
+
+    top: 6px;
+    left: 18px;
+
+    width: 1px;
+    height: 95%;
+
+    border-left: 1px dashed transparentize($main-black, 0.8)
+  }
+}
+
+.conditions__list-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  margin-bottom: 30px;
+
+  line-height: 21px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    counter-increment: section;
+    @include pseudo;
+    position: static;
+
+    content: counter(section);
+
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    margin-right: 23px;
+    padding: 7px 0;
+
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 700;
+    text-align: center;
+    color: $yellow;
+
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0px 3px 12px transparentize($black, 0.9);
+  }
+}
+
+.conditions__note {
+  position: relative;
+
+  margin: 0;
+  padding-left: 15px;
+
+  line-height: 21px;
+
+  &::before {
+    @include pseudo;
+
+    top: 0;
+    left: -3px;
+
+    width: 4px;
+    height: 100%;
+
+    background-image: $gradient;
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .conditions__content {
+    width: 53.8%;
+  }
+
+  .conditions__text {
+    width: auto;
+  }
+
+  .conditions__list {
+    width: auto;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .conditions {
+    background-image:
+      url("../img/bg-stamp-mobile@1x.png");
+    background-size: auto auto;
+    background-position: right 0 top 306px;
+  }
+
+  .conditions__wrapper {
+    justify-content: center;
+  }
+
+  .conditions__img {
+    display: none;
+  }
+
+  .conditions__content {
+    width: auto;
+  }
+
+  .conditions__wrapper {
+    padding: 31px 16px 40px 16px;
+  }
+
+  .conditions__title {
+    margin-bottom: 25px;
+
+    text-align: center;
+  }
+
+  .conditions__text {
+    margin-bottom: 23px;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .conditions__text-bold {
+    margin-bottom: 9px;
+
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .conditions__list {
+    margin-bottom: 25px;
+    margin-left: -8px;
+
+    &::before {
+      top: 16px;
+
+      height: 90%;
+    }
+  }
+
+  .conditions__list-item {
+    margin-bottom: 26px;
+    min-height: 66px;
+
+    font-size: 14px;
+    line-height: 22px;
+
+    &::before {
+      margin-right: 16px;
+    }
+  }
+
+  .conditions__note {
+    padding-left: 8px;
+
+    font-size: 14px;
+    line-height: 22px;
+
+    &::before {
+      left: -6px;
+    }
+  }
 }
