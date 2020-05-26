@@ -92,8 +92,42 @@
       </div>
     </section>
 
-    <section>
-      <!-- Хочу поехать и как поехать -->
+    <section class="callback-promo">
+      <div class="callback-promo__wrapper">
+        <div class="callback-promo__content">
+          <h2 class="callback-promo__title title">Хочу поехать!</h2>
+          <p class="callback-promo__text">Оставьте свой телефон и мы свяжемся с вами, подберём&nbsp;куратора и ответим на все вопросы!</p>
+          <form class="callback-promo__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+            <label class="visually-hidden" for="callback__tel">телефон</label>
+            <input class="input input--tel" id="callback__tel" type="tel" name="tel" pattern="[0-9]*" minlength="10" placeholder="телефон">
+
+            <button class="callback-promo__button button" type="submit">перезвоните мне</button>
+          </form>
+        </div>
+        <div class="callback-promo__img-wrapper">
+          <picture>
+            <source media="(max-width:767px)" srcset="img/feedback-mobile@1x.jpg 1x, img/feedback-mobile@2x.jpg 2x">
+            <img class="callback-promo__img" src="img/feedback-desktop@1x.jpg" srcset="img/feedback-desktop@2x.jpg 2x" alt="Фотография девушки с флагом израиля">
+          </picture>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="conditions">
+      <!-- photo? -->
+      <div class="conditions__wrapper">
+        <h2 class="conditions__title title">Как поехать</h2>
+        <p class="conditions__text">Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
+        <p class="conditions__text">Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</p>
+          <ol class="conditions__list">
+            <li class="conditions__list-item">Быть в возрасте от 16 до 30 лет</li>
+            <li class="conditions__list-item">Иметь оконченное среднее образование</li>
+            <li class="conditions__list-item">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>
+            <li class="conditions__list-item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
+          </ol>
+        <p class="conditions__note">Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.</p>
+      </div>
     </section>
 
     <section>
