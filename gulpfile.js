@@ -33,7 +33,7 @@ gulp.task("server", function () {
   server.init({
     server: "build/",
     notify: false,
-    open: true,
+    open: false,
     cors: true,
     ui: false
   });
@@ -69,7 +69,7 @@ gulp.task("webp", function () {
 gulp.task("sprite", function () {
   return gulp.src("source/img/{icon-*,htmlacademy*}.svg")
     .pipe(svgstore({inlineSvg: true}))
-    .pipe(rename("sprite_auto.svg"))
+    .pipe(rename("sprite-auto.svg"))
     .pipe(gulp.dest("build/img"));
 });
 
