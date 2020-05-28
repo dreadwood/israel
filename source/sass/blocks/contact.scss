@@ -38,13 +38,17 @@
     margin-bottom: 18px;
   }
 
-  .contact__callback {
-    // padding: 0 20px;
-  }
+  // .contact__callback {
+  //   padding: 0 20px;
+  // }
 }
 
 @media (max-width: $mobile-width-only) {
   .contact {
     padding-bottom: 63px;
+
+    &::before {
+      background-image: none;
+    }
   }
 }
