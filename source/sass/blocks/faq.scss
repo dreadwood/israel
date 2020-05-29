@@ -1,0 +1,76 @@
+.faq {
+  font-family: $font-deafult;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($main-black, 0.26);
+
+  background-image:
+    url("../img/bg-bag-desktop@1x.png"),
+    url("../img/watercolor-faq-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position:
+    left 0 bottom 4px,
+    left 0 top 56px;
+  background-size:
+    auto auto,
+    100% auto;
+  overflow-x: hidden;
+}
+
+.faq__wrapper {
+  @include wrapper;
+
+  position: relative;
+
+  padding: 138px 15px 110px 15px;
+}
+
+.faq__content {
+  width: 560px;
+}
+
+.faq__title {
+  margin-bottom: 34px;
+
+  text-align: left;
+}
+
+.faq__img {
+  position: absolute;
+  top: 138px;
+  left: 625px;
+}
+
+@media (max-width: $tablet-width-only) {
+  .faq__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .faq__title {
+    text-align: center;
+  }
+
+  .faq__img {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .faq {
+    background-image: url("../img/bg-bag-mobile@1x.png");
+    background-position: left 0 bottom 115px;
+    background-size: auto;
+  }
+
+  .faq__wrapper {
+    padding: 31px 16px 30px 16px;
+  }
+
+  .faq__title {
+    margin-bottom: 25px;
+  }
+}

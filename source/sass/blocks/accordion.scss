@@ -1,0 +1,117 @@
+.accordion {
+  font-family: $font-deafult;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($main-black, 0.26);
+
+  counter-reset: accordion;
+}
+
+.accordion__item {
+  min-height: 72px;
+  margin-bottom: 24px;
+  padding: 13px 0 24px 0;
+
+  border-bottom: 1px solid transparentize($main-black, 0.8);
+}
+
+.accordion__button {
+  position: relative;
+
+  width: 100%;
+  padding: 0 130px 0 28px;
+
+  font-size: 17px;
+  line-height: 25px;
+  text-align: left;
+  color: $main-black;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    @include pseudo;
+
+    counter-increment: accordion;
+    content: counter(accordion);
+
+    top: -15px;
+    left: 0;
+
+    font-size: 28px;
+    line-height: 48px;
+    font-weight: 700;
+    color: transparent;
+
+    background : $gradient;
+    background-clip: text;
+  }
+
+  &::after {
+    @include pseudo;
+
+    top: 8px;
+    right: 37px;
+
+    width: 17px;
+    height: 11px;
+
+    background-image: url("../img/icon-arrow-accordion.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.accordion__text {
+  height: 0;
+  margin: 0;
+
+  overflow: hidden;
+}
+
+.accordion__item--active .accordion__button {
+  &::after {
+    transform: rotate(-180deg);
+  }
+}
+
+.accordion__item--active .accordion__text {
+  height: auto;
+  padding: 24px 70px 8px 0;
+}
+
+@media (max-width: $mobile-width-only) {
+  .accordion__item {
+    min-height: 64px;
+    padding: 12px 0 16px 0;
+  }
+
+  .accordion__button {
+    padding: 0 25px 0 25px;
+
+    font-size: 16px;
+    line-height: 26px;
+
+    &::before {
+      top: -13px;
+      left: -2px;
+    }
+
+    &::after {
+      top: 10px;
+      right: 0;
+    }
+  }
+
+  .accordion__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .accordion__item--active .accordion__text {
+    padding: 17px 15px 0 0;
+  }
+}
