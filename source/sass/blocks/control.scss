@@ -1,0 +1,31 @@
+.control {
+  display: flex;
+  justify-content: space-between;
+}
+
+.control__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  cursor: pointer;
+
+  &--prev {
+    transform: rotate(180deg);
+  }
+}
+
+.control__button svg {
+  width: 11px;
+  height: 18px;
+
+  stroke: transparentize($main-black, 0.8);
+}
+
+.control__button:hover svg,
+.control__button:focus svg {
+  stroke: $yellow;
+}

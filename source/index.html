@@ -19,7 +19,7 @@
         <img src="img/logo-header-desktop@1x.png" width="137" height="48" alt="Логотип компании «MASA»">
       </picture>
     </a>
-    <button class="page-header__link">заказать звонок</button>
+    <button class="page-header__link" type="button">заказать звонок</button>
   </header>
 
   <main class="page-main">
@@ -188,38 +188,98 @@
           <h2 class="faq__title title">Частые вопросы</h2>
           <div class="faq__accordion accordion">
             <div class="accordion__item">
-              <button class="accordion__button">Кто организатор? Какие сроки у программы?</button>
+              <button class="accordion__button" type="button">Кто организатор? Какие сроки у программы?</button>
               <p class="accordion__text">Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
             </div>
             <div class="accordion__item">
-              <button class="accordion__button">Что такое грант на обучение?</button>
+              <button class="accordion__button" type="button">Что такое грант на обучение?</button>
               <p class="accordion__text">Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
             </div>
             <div class="accordion__item accordion__item--active">
-              <button class="accordion__button">Как определяется стоимость программы?</button>
+              <button class="accordion__button" type="button">Как определяется стоимость программы?</button>
               <p class="accordion__text">Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
             </div>
             <div class="accordion__item">
-              <button class="accordion__button">Что такое грант на обучение?</button>
+              <button class="accordion__button" type="button">Что такое грант на обучение?</button>
               <p class="accordion__text">Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
             </div>
             <div class="accordion__item">
-              <button class="accordion__button">Признаётся ли учеба в рамках проекта для дальнейшег о обучения?</button>
+              <button class="accordion__button" type="button">Признаётся ли учеба в рамках проекта для дальнейшег о обучения?</button>
               <p class="accordion__text">Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
             </div>
             <div class="accordion__item">
-              <button class="accordion__button">Как выглдядит полный процесс регистрации на&nbsp;программ у «Маса»?</button>
+              <button class="accordion__button" type="button">Как выглдядит полный процесс регистрации на&nbsp;программ у «Маса»?</button>
               <p class="accordion__text">Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
             </div>
           </div>
         </div>
         <img class="faq__img" src="img/questions-desktop@1x.png" width="645" height="803" alt="Двое молодых людей улыбаются за ноутбуком">
       </div>
-      <!-- Вопросы -->
     </section>
 
-    <section>
-      <!-- Отзывы -->
+    <section class="reviews">
+      <div class="reviews__wrapper">
+        <h2 class="reviews__title title">Отзывы</h2>
+
+        <div class="reviews__item">
+          <picture>
+            <source media="(max-width:767px)" srcset="img/reviews-olga-mobile@1x.jpg 1x, img/reviews-olga-mobile@2x.jpg 2x">
+            <img class="reviews__img" width="364" height="480" src="img/reviews-olga-desktop@1x.png" srcset="img/reviews-olga-desktop@1x.png 2x" alt="портретное фото улыбающийся Ольги Михайловны">
+          </picture>
+          <div class="reviews__content">
+            <h3  class="reviews__name">Ольга Михайлова</h3>
+            <p class="reviews__programm">
+              <span>Программа:</span>
+              Арт-Тель, февраль-сетнябрь 2017
+            </p>
+            <p class="reviews__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+            <p class="reviews__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+            <a class="reviews__item-link" href="#">Читать подробнее</a>
+            <ul class="reviews__social social-list">
+              <li>
+                <a href="#">
+                  <span class="visually-hidden">Фейсбук</span>
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="visually-hidden">Твиттер</span>
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="visually-hidden">Инстаграмм</span>
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-insta"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reviews__control">
+          <p class="reviews__counter">3 / 6</p>
+          <div class="reviews__control-button control">
+            <button class="control__button control__button--prev" type="button" aria-label="Предыдущий слайд">
+              <svg width="11" height="18">
+                <use xlink:href="#icon-arrow-slider"></use>
+              </svg>
+            </button>
+            <button class="control__button control__button--next" type="button" aria-label="Следующий слайд">
+              <svg width="11" height="18">
+                <use xlink:href="#icon-arrow-slider"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="contact">
