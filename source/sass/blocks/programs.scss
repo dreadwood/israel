@@ -12,6 +12,10 @@
   color: $main-black;
 }
 
+.programs--no-js .programs__list {
+  display: none;
+}
+
 .programs__title {
   margin-bottom: 66px;
 }
@@ -27,7 +31,12 @@
 }
 
 .programs__item {
+  display: none;
   padding: 17px 0;
+
+  &--active {
+    display: block;
+  }
 }
 
 .programs__item-title {

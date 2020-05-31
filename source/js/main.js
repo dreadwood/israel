@@ -3,6 +3,8 @@
 (function () {
   var TEL_LENGTH = 11;
   var ESC_KEY = 'Escape';
+  var LIST_BUTTON_ACTIVE_CLASS = 'list-button__item--active';
+  var PROGRAM_ITEM_ACTIVE_CLASS = 'programs__item--active';
 
   // Валидация телефона
   var inputsTel = document.querySelectorAll('.input--tel');
@@ -52,7 +54,6 @@
   var promoForm = document.querySelector('.callback-promo__form');
   var callbackForm = document.querySelector('.callback__form');
   var modalForm = document.querySelector('.modal__form');
-
 
   var isEscHandler = function (evt) {
     if (evt.key === ESC_KEY) {
@@ -110,6 +111,27 @@
 
   promoForm.addEventListener('submit', openSuccessModal);
   callbackForm.addEventListener('submit', openSuccessModal);
+
+  // Раздел программы
+  var programsSection = document.querySelector('.programs');
+  var programButtons = programsSection.querySelectorAll('.list-button__item');
+  var programItems = programsSection.querySelectorAll('.programs__item');
+
+  programsSection.classList.remove('programs--no-js');
+
+  var switchItem = function (arrItems, i, classActive) {
+    arrItems.forEach(function (item) {
+      item.classList.remove(classActive);
+    });
+    arrItems[i].classList.add(classActive);
+  };
+
+  programButtons.forEach(function (button, i) {
+    button.addEventListener('click', function () {
+      switchItem(programButtons, i, LIST_BUTTON_ACTIVE_CLASS);
+      switchItem(programItems, i, PROGRAM_ITEM_ACTIVE_CLASS);
+    });
+  });
 })();
 
 
