@@ -1,0 +1,186 @@
+.modal {
+  display: flex; // delete
+  justify-content: center; // delete
+
+  font-family: $font-deafult;
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: transparentize($main-black, 0.13);
+}
+
+.modal__card {
+  position: relative;
+
+  width: 480px;
+  padding: 56px 72px 26px 48px;
+
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px -12px $main-black;
+
+  &--success {
+    padding: 216px 30px 30px 30px;
+    min-height: 521px;
+
+    background-image: url("../img/icon-checkmark.svg");
+    background-repeat: no-repeat;
+    background-position: center 120px;
+  }
+}
+
+.modal__wrapper {
+  width: 360px;
+
+  &--success {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-family: $font-title;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+
+  color: $blue;
+
+  &--success {
+    text-align: center;
+  }
+}
+
+.modal__text {
+  margin: 0;
+  margin-bottom: 32px;
+
+  &--success {
+    text-align: center;
+  }
+}
+
+.modal__form input {
+  width: 100%;
+  margin-bottom: 8px;
+  padding-left: 37px;
+}
+
+.modal__form-wrapper {
+  width: 264px;
+  margin-left: 60px;
+  padding: 16px 0;
+}
+
+.modal__button {
+  width: 100%;
+  margin-bottom: 16px;
+
+  &--success {
+    width: 264px;
+    margin: 0 auto;
+  }
+}
+
+.modal__form label {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  padding-left: 24px;
+
+  font-size: 13px;
+  line-height: 19px;
+
+  color: transparentize($main-black, 0.26);
+
+  background-image: url("../img/icon-checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 1px;
+  user-select: none;
+}
+
+#privacy:checked ~ label {
+  background-image: url("../img/icon-checkbox-on.svg");
+}
+
+.modal__close {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__close svg {
+  fill: $yellow;
+}
+
+.modal__close svg:hover,
+.modal__close svg:focus {
+  fill: $main-black;
+}
+
+@media (max-width: $mobile-width-only) {
+  .modal__card {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0;
+    box-shadow: none;
+
+    &--success {
+      background-position: center 203px;
+    }
+  }
+
+  .modal__wrapper {
+    width: 288px;
+  }
+
+  .modal__title {
+    margin-bottom: 17px;
+
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  .modal__text {
+    margin-bottom: 31px;
+
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .modal__form-wrapper {
+    margin: 0 auto;
+  }
+
+  .modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

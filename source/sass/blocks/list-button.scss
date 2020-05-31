@@ -95,7 +95,9 @@
     color: $white;
     text-transform: uppercase;
 
-    background: $gradient-btn-list;
+    background: url("../img/ribbon-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 
   &--active::before {
