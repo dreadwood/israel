@@ -1,6 +1,8 @@
 .modal {
-  display: flex; // delete
-  justify-content: center; // delete
+  // display: flex; // delete
+  // justify-content: center; // delete
+  display: none;
+  margin: 0 auto;
 
   font-family: $font-deafult;
   font-size: 15px;
@@ -24,19 +26,30 @@
   &--success {
     padding: 216px 30px 30px 30px;
     min-height: 521px;
-
-    background-image: url("../img/icon-checkmark.svg");
-    background-repeat: no-repeat;
-    background-position: center 120px;
   }
 }
 
 .modal__wrapper {
   width: 360px;
+}
 
-  &--success {
-    width: 300px;
-    margin: 0 auto;
+.modal__wrapper--success {
+  position: relative;
+
+  width: 300px;
+  margin: 0 auto;
+
+  &::before {
+    @include pseudo;
+
+    top: -95px;
+    left: calc(50% - 33px);
+
+    width: 72px;
+    height: 64px;
+
+    background-image: url("../img/icon-checkmark.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -104,6 +117,11 @@
   background-repeat: no-repeat;
   background-position: 0 1px;
   user-select: none;
+}
+
+#privacy:focus ~ label {
+  box-shadow:
+    0 0 2px 1px $yellow;
 }
 
 #privacy:checked ~ label {

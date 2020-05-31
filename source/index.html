@@ -19,12 +19,13 @@
         <img src="img/logo-header-desktop@1x.png" width="137" height="48" alt="Логотип компании «MASA»">
       </picture>
     </a>
-    <button class="page-header__link" type="button">заказать звонок</button>
+    <a class="page-header__link" href="#callback">заказать звонок</a>
   </header>
 
   <main class="page-main">
     <h1 class="visually-hidden">Стажировки в Израиль - проект MASA</h1>
     <section class="main-banner">
+      <h2 class="visually-hidden">Баннер</h2>
       <p class="main-banner__text">Учёба, путешествие и карьера для еврейской молодёжи</p>
     </section>
 
@@ -33,7 +34,7 @@
       <div class="project__about">
         <div class="about-program">
           <h2 class="about-program__title title">О программе</h2>
-          <p class="about-program__text">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+          <p class="about-program__text">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
           <video class="about-program__video" controls width="870" height="460" poster="img/video-desktop@1x.jpg" preload="none">
             <source src="https://ia801602.us.archive.org/11/items/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
           </video>
@@ -84,7 +85,7 @@
           <p class="callback-promo__text">Оставьте свой телефон и мы свяжемся с вами, подберём&nbsp;куратора и ответим на все вопросы!</p>
           <form class="callback-promo__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
             <label class="visually-hidden" for="callback-promo__tel">телефон</label>
-            <input class="input input--tel" id="callback-promo__tel" type="tel" name="tel" pattern="[0-9]*" minlength="10" placeholder="телефон">
+            <input class="input input--tel" id="callback-promo__tel" type="tel" name="tel" required placeholder="телефон">
 
             <button class="callback-promo__button button" type="submit">перезвоните мне</button>
           </form>
@@ -176,7 +177,7 @@
       <div class="promo__wrapper">
         <div class="promo__content">
           <p class="promo__title title">#masaisrael</p>
-          <p class="promo__text">Познакомьтесь с программой от&nbsp;первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни, учёбе и путешествиях в&nbsp;Израиле. </p>
+          <p class="promo__text">Познакомьтесь с программой от&nbsp;первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни, учёбе и путешествиях в&nbsp;Израиле.</p>
           <a href="#" class="promo__button button">смотреть фото</a>
         </div>
       </div>
@@ -336,7 +337,7 @@
         </div>
       </div>
 
-      <div class="contact__callback callback">
+      <div class="contact__callback callback" id="callback">
         <div class="callback__wrapper">
           <p class="callback__text callback__text--bold">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
           <p class="callback__text">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
@@ -344,10 +345,10 @@
 
         <form class="callback__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
           <label class="visually-hidden" for="callback__name">имя</label>
-          <input class="input" id="callback__name" type="text" name="name" placeholder="имя">
+          <input class="input" id="callback__name" type="text" name="name" autocapitalize="off" required placeholder="имя">
 
           <label class="visually-hidden" for="callback__tel">телефон</label>
-          <input class="input input--tel" id="callback__tel" type="tel" name="tel" pattern="[0-9]*" minlength="10" placeholder="+7 (923) 41">
+          <input class="input input--tel" id="callback__tel" type="tel" name="tel" required placeholder="телефон">
 
           <button class="callback__button button" type="submit">перезвоните мне</button>
         </form>
@@ -390,17 +391,17 @@
     </div>
   </footer>
 
-  <section class="modal" style="display: none;">
-    <div class="modal__card">
+  <section class="modal modal--callback">
+    <div class="modal__card" id="modal">
       <div class="modal__wrapper">
         <h2 class="modal__title">Заказать звонок</h2>
         <p class="modal__text">Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
         <form class="modal__form" action="https://echo.htmlacademy.ru" autocomplete="off" method="POST">
-          <input class="input" type="tel" name="tel" minlength="10" pattern="[0-9]*" required placeholder="имя">
-          <input class="input input--tel" type="email" name="email" autocapitalize="off" placeholder="телефон">
+          <input class="input input--name" type="text" name="name" autocapitalize="off" required min="1" placeholder="имя">
+          <input class="input input--tel" type="tel" name="tel" minlength="11" required placeholder="телефон">
           <div class="modal__form-wrapper">
             <button class="modal__button button" type="submit">перезвоните мне</button>
-            <input class="visually-hidden" id="privacy" type="checkbox">
+            <input class="visually-hidden" id="privacy" type="checkbox" required>
             <label for="privacy">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
           </div>
         </form>
@@ -414,7 +415,7 @@
     </div>
   </section>
 
-  <section class="modal overlay">
+  <section class="modal modal--success">
     <div class="modal__card modal__card--success">
       <div class="modal__wrapper modal__wrapper--success">
         <h2 class="modal__title modal__title--success">Заявка принята</h2>
@@ -430,5 +431,7 @@
     </div>
   </section>
 
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

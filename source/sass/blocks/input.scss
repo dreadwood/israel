@@ -13,41 +13,36 @@
   text-transform: uppercase;
 
   background-color: $white;
-  background-position: 60px 40px;
-  background-repeat: no-repeat;
   border: 2px solid $gray;
   border-radius: 80px;
+  outline: none;
 
   &::placeholder {
     color: transparentize($main-black, 0.5);
     font-variant: small-caps;
   }
 
-  &:valid {
-    border-color: $main-black;
-  }
-
   &:hover,
   &:focus {
-
     border-color: $yellow;
     box-shadow: 0 4px 4px transparentize($black, 0.75);
   }
 
-  &:invalid {
+  &:required:valid {
+    border-color: $main-black;
+  }
+
+  &--tel-bg {
+    background-image: url("../img/input-bg.svg");
+    background-position: 55px 38px;
+    background-repeat: no-repeat;
+  }
+
+  &--valid {
+    border-color: $main-black;
+  }
+
+  &--invalid {
     border-color: $red;
-  }
-
-  &--tel:valid {
-    background-image: url("../img/input-bg.svg");
-  }
-
-  &--tel:invalid {
-    background-image: url("../img/input-bg.svg");
-  }
-
-  &--tel:hover,
-  &--tel:focus {
-    background-image: url("../img/input-bg.svg");
   }
 }
