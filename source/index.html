@@ -15,6 +15,8 @@
     <a class="page-header__tel" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
     <a class="page-header__logo">
       <picture>
+        <source type="image/webp" media="(max-width:768px)" srcset="img/logo-header-mobile@1x.webp">
+        <source type="image/webp" srcset="img/logo-header-desktop@1x.webp">
         <source media="(max-width:767px)" srcset="img/logo-header-mobile@1x.png">
         <img src="img/logo-header-desktop@1x.png" width="137" height="48" alt="Логотип компании «MASA»">
       </picture>
@@ -111,7 +113,11 @@
         </div>
         <div class="callback-promo__img-wrapper">
           <picture>
+            <source type="image/webp" media="(max-width:768px)" srcset="img/feedback-mobile@1x.webp 1x, img/feedback-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="img/feedback-desktop@1x.webp 1x, img/feedback-desktop@2x.webp 2x">
+            <!-- 1х: 424px; 2x: 848px -->
             <source media="(max-width:767px)" srcset="img/feedback-mobile@1x.jpg 1x, img/feedback-mobile@2x.jpg 2x">
+            <!-- 1х: 818px; 2x: 1636px -->
             <img class="callback-promo__img" src="img/feedback-desktop@1x.jpg" srcset="img/feedback-desktop@2x.jpg 2x" alt="Фотография девушки с флагом израиля">
           </picture>
         </div>
@@ -121,7 +127,11 @@
 
     <section class="conditions">
       <div class="conditions__wrapper">
-        <img class="conditions__img" src="img/how-to-go-desktop@1x.png" srcset="img/how-to-go-desktop@2x.png 2x" alt="Мужчина и женщина улыбаються, на улице во время солнечной погоды">
+        <picture>
+          <source type="image/webp" srcset="img/how-to-go-desktop@1x.webp 1x, img/how-to-go-desktop@2x.webp 2x">
+          <!-- 1х: 581px; 2x: 1162px -->
+          <img class="conditions__img" src="img/how-to-go-desktop@1x.png" srcset="img/how-to-go-desktop@2x.png 2x" alt="Мужчина и женщина улыбаються, на улице во время солнечной погоды">
+      </picture>
 
         <div class="conditions__content">
           <h2 class="conditions__title title">Как поехать</h2>
@@ -146,35 +156,55 @@
           <ul class="live__list">
             <li class="live__item live__item--tour live__item--active">
               <picture>
+                <source type="image/webp" media="(max-width:768px)" srcset="img/live-tour-desktop@1x.webp 1x, img/live-tour-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/live-tour-desktop@1x.webp 1x, img/live-tour-desktop@2x.webp 2x">
+                <!-- 1х: 288px; 2x: 576px -->
                 <source media="(max-width:767px)" srcset="img/live-tour-mobile@1x.jpg 1x, img/live-tour-mobile@2x.jpg 2x">
+                <!-- 1х: 482px; 2x: 964px -->
                 <img class="live__item-img" src="img/live-tour-desktop@1x.png" srcset="img/live-tour-desktop@2x.png 2x" width="482" height="732" alt="Фотография храма">
               </picture>
               <p class="live__item-text">Экскурсии по Израилю и&nbsp;знакомство с его историей</p>
               </li>
             <li class="live__item live__item--hebrew">
               <picture>
+                <source type="image/webp" media="(max-width:768px)" srcset="img/live-hebrew-mobile@1x.webp 1x, img/live-hebrew-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/live-hebrew-desktop@1x.webp 1x, img/live-hebrew-desktop@2x.webp 2x">
+                <!-- 1х: 288px; 2x: 576px -->
                 <source media="(max-width:767px)" srcset="img/live-hebrew-mobile@1x.jpg 1x, img/live-hebrew-mobile@2x.jpg 2x">
+                <!-- 1х: 211px; 2x: 422px -->
                 <img class="live__item-img" src="img/live-hebrew-desktop@1x.png" srcset="img/live-hebrew-desktop@2x.png 2x" width="211" height="318" alt="Мужчина учит Иврит">
               </picture>
               <p class="live__item-text">Изучение иврита</p>
             </li>
             <li class="live__item live__item--learn">
               <picture>
+                <source type="image/webp" media="(max-width:768px)" srcset="img/live-learn-mobile@2x.webp 1x, img/live-learn-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/live-learn-desktop@1x.webp 1x, img/live-learn-desktop@2x.webp 2x">
+                <!-- 1х: 288px; 2x: 576px -->
                 <source media="(max-width:767px)" srcset="img/live-learn-mobile@1x.jpg 1x, img/live-learn-mobile@2x.jpg 2x">
+                <!-- 1х: 411px; 2x: 822px -->
                 <img class="live__item-img" src="img/live-learn-desktop@1x.png" srcset="img/live-learn-desktop@2x.png 2x" width="411" height="318" alt="Двое мужчин смотрят проект на компьютере">
               </picture>
               <p class="live__item-text">Обучение современным навыкам и профессиям</p>
             </li>
             <li class="live__item live__item--project">
               <picture>
+                <source type="image/webp" media="(max-width:768px)" srcset="img/live-project-mobile@1x.webp 1x, img/live-project-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/live-project-desktop@1x.webp 1x, img/live-project-desktop@2x.webp 2x">
+                <!-- 1х: 288px; 2x: 576px -->
                 <source media="(max-width:767px)" srcset="img/live-project-mobile@1x.jpg 1x, img/live-project-mobile@2x.jpg 2x">
+                <!-- 1х: 411px; 2x: 822px -->
                 <img class="live__item-img" src="img/live-project-desktop@1x.png" srcset="img/live-project-desktop@2x.png 2x" width="411" height="318" alt="Трое молодых людей улыбаются">
               </picture>
               <p class="live__item-text">Совместные творческие проекты с израильской молодёжью</p>
             </li>
             <li class="live__item live__item--development">
               <picture>
+                <source type="image/webp" media="(max-width:768px)" srcset="img/live-development-mobile@1x.webp 1x, img/live-development-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/live-development-desktop@1x.webp 1x, img/live-development-desktop@2x.webp 2x">
+                  <!-- 1х: 288px; 2x: 576px -->
                 <source media="(max-width:767px)" srcset="img/live-development-mobile@1x.jpg 1x, img/live-development-mobile@2x.jpg 2x">
+                  <!-- 1х: 214px; 2x: 428px -->
                 <img class="live__item-img" src="img/live-development-desktop@1x.png" srcset="img/live-development-desktop@2x.png 2x" width="214" height="318" alt="Человек на фоне заката">
               </picture>
               <p class="live__item-text">Развитие лидерства</p>
@@ -233,7 +263,11 @@
             </div>
           </div>
         </div>
-        <img class="faq__img" src="img/questions-desktop@1x.png" width="645" height="803" alt="Двое молодых людей улыбаются за ноутбуком">
+        <picture>
+          <source type="image/webp" srcset="img/questions-desktop@1x.webp 1x, img/questions-desktop@2x.webp 2x">
+          <!-- 1х: 364px; 2x: 728px -->
+          <img class="faq__img" src="img/questions-desktop@1x.png" width="645" height="803" alt="Двое молодых людей улыбаются за ноутбуком">
+        </picture>
       </div>
     </section>
 
@@ -244,7 +278,11 @@
         <div class="reviews__list">
           <div class="reviews__item reviews__item--active">
             <picture>
+              <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
+              <!-- 1х: 240px; 2x: 480px -->
               <source media="(max-width:767px)" srcset="img/reviews-olga-mobile@1x.jpg 1x, img/reviews-olga-mobile@2x.jpg 2x">
+              <!-- 1х: 364px; 2x: 728px -->
               <img class="reviews__img" width="364" height="480" src="img/reviews-olga-desktop@1x.png" srcset="img/reviews-olga-desktop@1x.png 2x" alt="портретное фото улыбающийся Ольги Михайловны">
             </picture>
             <div class="reviews__content">
@@ -286,7 +324,11 @@
           </div>
           <div class="reviews__item">
             <picture>
+              <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
+              <!-- 1х: 240px; 2x: 480px -->
               <source media="(max-width:767px)" srcset="img/reviews-olga-mobile@1x.jpg 1x, img/reviews-olga-mobile@2x.jpg 2x">
+              <!-- 1х: 364px; 2x: 728px -->
               <img class="reviews__img" width="364" height="480" src="img/reviews-olga-desktop@1x.png" srcset="img/reviews-olga-desktop@1x.png 2x" alt="портретное фото улыбающийся Ольги Михайловны">
             </picture>
             <div class="reviews__content">
@@ -328,7 +370,11 @@
           </div>
           <div class="reviews__item">
             <picture>
+              <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
+              <!-- 1х: 240px; 2x: 480px -->
               <source media="(max-width:767px)" srcset="img/reviews-olga-mobile@1x.jpg 1x, img/reviews-olga-mobile@2x.jpg 2x">
+              <!-- 1х: 364px; 2x: 728px -->
               <img class="reviews__img" width="364" height="480" src="img/reviews-olga-desktop@1x.png" srcset="img/reviews-olga-desktop@1x.png 2x" alt="портретное фото улыбающийся Ольги Михайловны">
             </picture>
             <div class="reviews__content">
@@ -370,7 +416,11 @@
           </div>
           <div class="reviews__item">
             <picture>
+              <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
+              <!-- 1х: 240px; 2x: 480px -->
               <source media="(max-width:767px)" srcset="img/reviews-olga-mobile@1x.jpg 1x, img/reviews-olga-mobile@2x.jpg 2x">
+              <!-- 1х: 364px; 2x: 728px -->
               <img class="reviews__img" width="364" height="480" src="img/reviews-olga-desktop@1x.png" srcset="img/reviews-olga-desktop@1x.png 2x" alt="портретное фото улыбающийся Ольги Михайловны">
             </picture>
             <div class="reviews__content">
@@ -412,7 +462,11 @@
           </div>
           <div class="reviews__item">
             <picture>
+              <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
+              <!-- 1х: 240px; 2x: 480px -->
               <source media="(max-width:767px)" srcset="img/reviews-olga-mobile@1x.jpg 1x, img/reviews-olga-mobile@2x.jpg 2x">
+              <!-- 1х: 364px; 2x: 728px -->
               <img class="reviews__img" width="364" height="480" src="img/reviews-olga-desktop@1x.png" srcset="img/reviews-olga-desktop@1x.png 2x" alt="портретное фото улыбающийся Ольги Михайловны">
             </picture>
             <div class="reviews__content">
@@ -454,7 +508,11 @@
           </div>
           <div class="reviews__item">
             <picture>
+              <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
+              <!-- 1х: 240px; 2x: 480px -->
               <source media="(max-width:767px)" srcset="img/reviews-olga-mobile@1x.jpg 1x, img/reviews-olga-mobile@2x.jpg 2x">
+              <!-- 1х: 364px; 2x: 728px -->
               <img class="reviews__img" width="364" height="480" src="img/reviews-olga-desktop@1x.png" srcset="img/reviews-olga-desktop@1x.png 2x" alt="портретное фото улыбающийся Ольги Михайловны">
             </picture>
             <div class="reviews__content">
@@ -524,7 +582,11 @@
             <button type="button">Новосибирск</button>
           </div>
           <div class="curator__person">
-            <img class="curator__photo" src="img/curator@1x.jpg" alt="Фотография куратора Анны Горелик">
+            <picture>
+              <source type="image/webp" srcset="img/curator@1x.webp 1x, img/curator@2x.webp 2x">
+              <!-- 1х: 112px; 2x: 224px -->
+              <img class="curator__photo" src="img/curator@1x.jpg" srcset="img/curator@2x.jpg 2x" alt="Фотография куратора Анны Горелик">
+            </picture>
             <div class="curator__person-wrapper">
               <p class="curator__name">
                 <span>Ваш куратор:</span>
@@ -564,7 +626,10 @@
         </div>
 
         <div class="curator__map">
+          <picture>
+            <source type="image/webp" srcset="img/map-desktop@1x.webp 1x">
             <img class="curator__map-img" src="../img/map-desktop@1x.png" width="702" height="448" alt="Карта офиса: Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
+          </picture>
         </div>
       </div>
 
@@ -590,7 +655,10 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="page-footer__logo">
-        <img src="img/logo-footer@1x.png" width="85" height="27" alt="Логотип компании «MASA»">
+        <picture>
+          <source type="image/webp" srcset="img/logo-footer@1x.webp">
+          <img src="img/logo-footer@1x.png" width="85" height="27" alt="Логотип компании «MASA»">
+        </picture>
       </a>
       <p class="page-footer__copyright">Copyright someDesignCompany ©2019</p>
       <ul class="page-footer__social-list social-list">
