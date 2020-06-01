@@ -71,7 +71,8 @@
   }
 
   .callback-promo__content {
-    width: auto;
+    // width: auto;
+    margin: 0 auto;
     padding: 0 16px;
   }
 
@@ -84,6 +85,7 @@
 
     font-size: 16px;
     line-height: 26px;
+    text-align: center;
   }
 
   .callback-promo__form {
