@@ -150,4 +150,19 @@
   liveSection.classList.remove('live--no-js');
 
   setInterval(nextSlide, LIVE_SLIDER_TIMING);
+
+  // раздел FAQ
+  var faqSection = document.querySelector('.faq');
+  var accordionItems = document.querySelectorAll('.accordion__item');
+  var accordionButton = document.querySelectorAll('.accordion__button');
+
+  faqSection.classList.remove('faq--no-js');
+
+  accordionButton.forEach(function (button, i) {
+    button.addEventListener('click', function () {
+      switchItem(accordionItems, i, 'accordion__item--active');
+    });
+  });
+
+
 })();
