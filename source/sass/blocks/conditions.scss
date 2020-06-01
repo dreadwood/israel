@@ -85,7 +85,7 @@
     width: 1px;
     height: 95%;
 
-    border-left: 1px dashed transparentize($main-black, 0.8)
+    border-left: 1px dashed transparentize($main-black, 0.8);
   }
 }
 
@@ -104,8 +104,9 @@
   }
 
   &::before {
-    counter-increment: section;
     @include pseudo;
+
+    counter-increment: section;
     position: static;
 
     content: counter(section);
@@ -124,7 +125,7 @@
 
     background-color: $white;
     border-radius: 50%;
-    box-shadow: 0px 3px 12px transparentize($black, 0.9);
+    box-shadow: 0 3px 12px transparentize($black, 0.9);
   }
 }
 
@@ -165,14 +166,14 @@
 
 @media (max-width: $mobile-width-only) {
   .conditions {
-    background-image:
-      url("../img/bg-stamp-mobile@1x.png");
+    background-image: url("../img/bg-stamp-mobile@1x.png");
     background-size: auto auto;
     background-position: right 0 top 306px;
   }
 
   .conditions__wrapper {
     justify-content: center;
+    padding: 31px 16px 40px 16px;
   }
 
   .conditions__img {
@@ -181,10 +182,6 @@
 
   .conditions__content {
     width: auto;
-  }
-
-  .conditions__wrapper {
-    padding: 31px 16px 40px 16px;
   }
 
   .conditions__title {

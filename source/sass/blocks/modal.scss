@@ -1,6 +1,4 @@
 .modal {
-  // display: flex; // delete
-  // justify-content: center; // delete
   display: none;
   margin: 0 auto;
 
@@ -119,12 +117,11 @@
   user-select: none;
 }
 
-#privacy:focus ~ label {
-  box-shadow:
-    0 0 2px 1px $yellow;
+.modal__checkbox:focus ~ label {
+  box-shadow: 0 0 2px 1px $yellow;
 }
 
-#privacy:checked ~ label {
+.modal__checkbox:checked ~ label {
   background-image: url("../img/icon-checkbox-on.svg");
 }
 
