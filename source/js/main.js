@@ -57,8 +57,8 @@
   var isEscHandler = function (evt) {
     if (evt.key === ESC_KEY) {
       evt.preventDefault();
-      callbackModal.classList.remove('overlay');
-      successModal.classList.remove('overlay');
+
+      closeModal();
 
       document.removeEventListener('keydown', isEscHandler);
     }
@@ -67,13 +67,16 @@
   var closeModal = function () {
     callbackModal.classList.remove('overlay');
     successModal.classList.remove('overlay');
+    document.body.classList.remove('scroll-hidden');
 
     document.removeEventListener('keydown', isEscHandler);
   };
 
   var openSuccessModal = function (evt) {
     evt.preventDefault();
-    closeModal();
+
+    document.body.classList.add('scroll-hidden');
+
     modalForm.reset();
     promoForm.reset();
     callbackForm.reset();
@@ -85,6 +88,7 @@
   var openCallbackModal = function (evt) {
     evt.preventDefault();
 
+    document.body.classList.add('scroll-hidden');
     callbackModal.classList.add('overlay');
     callbackModalInputName.focus();
 
