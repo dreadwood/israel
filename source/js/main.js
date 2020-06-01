@@ -3,8 +3,7 @@
 (function () {
   var TEL_LENGTH = 11;
   var ESC_KEY = 'Escape';
-  var LIST_BUTTON_ACTIVE_CLASS = 'list-button__item--active';
-  var PROGRAM_ITEM_ACTIVE_CLASS = 'programs__item--active';
+  var LIVE_SLIDER_TIMING = 4000;
 
   // Валидация телефона
   var inputsTel = document.querySelectorAll('.input--tel');
@@ -128,11 +127,27 @@
 
   programButtons.forEach(function (button, i) {
     button.addEventListener('click', function () {
-      switchItem(programButtons, i, LIST_BUTTON_ACTIVE_CLASS);
-      switchItem(programItems, i, PROGRAM_ITEM_ACTIVE_CLASS);
+      switchItem(programButtons, i, 'list-button__item--active');
+      switchItem(programItems, i, 'programs__item--active');
     });
   });
+
+  // Раздел жизнь в Израиле
+  var liveSection = document.querySelector('.live');
+  var liveSlides = document.querySelectorAll('.live__item');
+  var liveControlsSlides = document.querySelectorAll('.live__control-item');
+
+  var currentSlide = 0;
+
+  var nextSlide = function () {
+    liveSlides[currentSlide].classList.remove('live__item--active');
+    liveControlsSlides[currentSlide].classList.remove('live__control-item--active');
+    currentSlide = (currentSlide + 1) % liveSlides.length;
+    liveSlides[currentSlide].classList.add('live__item--active');
+    liveControlsSlides[currentSlide].classList.add('live__control-item--active');
+  };
+
+  liveSection.classList.remove('live--no-js');
+
+  setInterval(nextSlide, LIVE_SLIDER_TIMING);
 })();
-
-
-
