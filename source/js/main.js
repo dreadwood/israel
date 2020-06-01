@@ -41,18 +41,23 @@
   });
 
   // Модальные окна
-  var callbackButton = document.querySelector('.page-header__link');
+  var headerCallbackButton = document.querySelector('.page-header__link');
+
   var callbackModal = document.querySelector('.modal--callback');
   var callbackModalClose = callbackModal.querySelector('.modal__close');
-  var callbackModalInputName = callbackModal.querySelector('.input--name');
 
   var successModal = document.querySelector('.modal--success');
   var successModalClose = successModal.querySelector('.modal__close');
   var successModalButton = successModal.querySelector('.modal__button');
 
   var promoForm = document.querySelector('.callback-promo__form');
+  var promoFormTel = promoForm.querySelector('.input--tel');
   var callbackForm = document.querySelector('.callback__form');
+  var callbackFormName = callbackForm.querySelector('.input--name');
+  var callbackFormTel = callbackForm.querySelector('.input--tel');
   var modalForm = document.querySelector('.modal__form');
+  var modalFormName = modalForm.querySelector('.input--name');
+  var modalFormTel = modalForm.querySelector('.input--tel');
 
   var isEscHandler = function (evt) {
     if (evt.key === ESC_KEY) {
@@ -90,13 +95,18 @@
 
     document.body.classList.add('scroll-hidden');
     callbackModal.classList.add('overlay');
-    callbackModalInputName.focus();
+    modalFormName.focus();
 
     document.addEventListener('keydown', isEscHandler);
-    modalForm.addEventListener('submit', openSuccessModal);
+    modalForm.addEventListener('submit', function (evtSubmit) {
+      localStorage.setItem('userName', modalFormName.value);
+      localStorage.setItem('userTel', modalFormTel.value);
+      openSuccessModal(evtSubmit);
+    });
   };
 
-  callbackButton.addEventListener('click', openCallbackModal);
+  headerCallbackButton.addEventListener('click', openCallbackModal);
+
   callbackModalClose.addEventListener('click', closeModal);
   callbackModal.addEventListener('click', function (evt) {
     if (evt.target === callbackModal) {
@@ -112,8 +122,16 @@
     }
   });
 
-  promoForm.addEventListener('submit', openSuccessModal);
-  callbackForm.addEventListener('submit', openSuccessModal);
+  promoForm.addEventListener('submit', function (evt) {
+    localStorage.setItem('userTel', promoFormTel.value);
+    openSuccessModal(evt);
+  });
+
+  callbackForm.addEventListener('submit', function (evt) {
+    localStorage.setItem('userName', callbackFormName.value);
+    localStorage.setItem('userTel', callbackFormTel.value);
+    openSuccessModal(evt);
+  });
 
   // Раздел программы
   var programsSection = document.querySelector('.programs');
