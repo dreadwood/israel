@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -26,6 +27,7 @@ body {
   color: $main-black;
 
   background-color: $white;
+
 }
 
 a {
