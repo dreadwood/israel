@@ -66,28 +66,28 @@
     color: $yellow;
   }
 
-  &--general:hover::before,
-  &--general:focus::before {
+  &--general:hover::before:not(&--active),
+  &--general:focus::before:not(&--active) {
     background-image: url("../img/icon-star-yellow@1x.png");
   }
 
-  &--academic:hover::before,
-  &--academic:focus::before {
+  &--academic:hover::before:not(&--active),
+  &--academic:focus::before:not(&--active) {
     background-image: url("../img/icon-hat-yellow@1x.png");
   }
 
-  &--internship:hover::before,
-  &--internship:focus::before {
+  &--internship:hover::before:not(&--active),
+  &--internship:focus::before:not(&--active) {
     background-image: url("../img/icon-bag-yellow@1x.png");
   }
 
-  &--volunteer:hover::before,
-  &--volunteer:focus::before {
+  &--volunteer:hover::before:not(&--active),
+  &--volunteer:focus::before:not(&--active) {
     background-image: url("../img/icon-hand-yellow@1x.png");
   }
 
-  &--religion:hover::before,
-  &--religion:focus::before {
+  &--religion:hover::before:not(&--active),
+  &--religion:focus::before:not(&--active) {
     background-image: url("../img/icon-menorah-yellow@1x.png");
   }
 
