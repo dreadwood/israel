@@ -141,14 +141,14 @@
   var liveSlides = document.querySelectorAll('.live__item');
   var liveControlsSlides = document.querySelectorAll('.live__control-item');
 
-  var currentSlide = 0;
+  var currentLiveSlide = 0;
 
   var nextSlide = function () {
-    liveSlides[currentSlide].classList.remove('live__item--active');
-    liveControlsSlides[currentSlide].classList.remove('live__control-item--active');
-    currentSlide = (currentSlide + 1) % liveSlides.length;
-    liveSlides[currentSlide].classList.add('live__item--active');
-    liveControlsSlides[currentSlide].classList.add('live__control-item--active');
+    liveSlides[currentLiveSlide].classList.remove('live__item--active');
+    liveControlsSlides[currentLiveSlide].classList.remove('live__control-item--active');
+    currentLiveSlide = (currentLiveSlide + 1) % liveSlides.length;
+    liveSlides[currentLiveSlide].classList.add('live__item--active');
+    liveControlsSlides[currentLiveSlide].classList.add('live__control-item--active');
   };
 
   liveSection.classList.remove('live--no-js');
@@ -168,5 +168,27 @@
     });
   });
 
+  // раздел отзывы
+  var reviewsSection = document.querySelector('.reviews');
+  var reviewsSlides = document.querySelectorAll('.reviews__item');
+  var reviewsCounter = document.querySelector('.reviews__counter');
+  var reviewsButtonPrev = document.querySelector('.control__button--prev');
+  var reviewsButtonNext = document.querySelector('.control__button--next');
 
+  var currentReviewsSlide = 0;
+
+  var changeSlides = function (evt) {
+    reviewsSlides[currentReviewsSlide].classList.remove('reviews__item--active');
+    currentReviewsSlide = (evt.target === reviewsButtonPrev)
+      ? (currentReviewsSlide - 1) % reviewsSlides.length
+      : (currentReviewsSlide + 1) % reviewsSlides.length;
+
+    reviewsSlides[currentReviewsSlide].classList.add('reviews__item--active');
+    reviewsCounter.textContent = (currentReviewsSlide + 1) + ' / ' + reviewsSlides.length;
+  };
+
+  reviewsSection.classList.remove('reviews--no-js');
+
+  reviewsButtonNext.addEventListener('click', changeSlides);
+  reviewsButtonPrev.addEventListener('click', changeSlides);
 })();

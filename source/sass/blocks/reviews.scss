@@ -17,6 +17,15 @@
     right 0 top 60px;
 }
 
+.reviews--no-js .reviews__item {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.reviews--no-js .reviews__control {
+  display: none;
+}
+
 .reviews__wrapper {
   @include wrapper;
 
@@ -34,7 +43,11 @@
 .reviews__item {
   position: relative;
 
-  display: flex;
+  display: none;
+
+  &--active {
+    display: flex;
+  }
 }
 
 .reviews__img {
@@ -111,6 +124,7 @@
 }
 
 .reviews__counter {
+  min-width: 36px;
   margin: 0;
   margin-right: 14px;
 
@@ -131,6 +145,10 @@
     background-position:
       right 0 top 79px,
       right 0 top 60px;
+  }
+
+  .reviews--no-js .reviews__item {
+    margin-bottom: 20px;
   }
 
   .reviews__wrapper {
