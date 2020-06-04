@@ -110,6 +110,13 @@
   .list-button {
     width: 100%;
     overflow-x: scroll;
+
+    scrollbar-width: none;
+
+    &::-scrollbar {
+      width: 0;
+      height: 0;
+    }
   }
 
   .list-button__list {
