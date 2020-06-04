@@ -32,6 +32,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 
   &::before {
     @include pseudo;
