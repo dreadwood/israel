@@ -33,18 +33,6 @@
       background-image: url("../img/banner-desktop@2x.jpg");
     }
   }
-
-  &::after {
-    @include pseudo;
-
-    bottom: 135px;
-    left: calc(50% - 38px);
-
-    width: 76px;
-    height: 131.5px;
-
-    background-image: url("../img/mouse-scroll@x1.png");
-  }
 }
 
 .main-banner__text {
@@ -55,6 +43,24 @@
   margin: 0 auto;
 
   text-shadow: 0 1px 4px transparentize($black, 0.88);
+}
+
+.main-banner__button {
+  position: absolute;
+  bottom: 135px;
+  left: calc(50% - 38px);
+
+  display: block;
+
+  width: 76px;
+  height: 131.5px;
+  background-image: url("../img/mouse-scroll@x1.png");
+  outline: none;
+
+  &:hover,
+  &focus {
+    filter: invert(100%);
+  }
 }
 
 @media (max-width: $tablet-width-only) {
@@ -84,10 +90,6 @@
         background-image: url("../img/banner-mobile-full@2x.jpg");
       }
     }
-
-    &::after {
-      bottom: 85px;
-    }
   }
 
   .main-banner__text {
@@ -95,5 +97,9 @@
 
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .main-banner__button {
+    bottom: 85px;
   }
 }
