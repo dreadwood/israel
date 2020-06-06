@@ -17,14 +17,17 @@
     right 0 top 60px;
 }
 
-.reviews--no-js .reviews__item {
-  display: flex;
-  // margin-bottom: 60px;
+.reviews--no-js .reviews__list {
+  flex-wrap: wrap;
 }
 
-// .reviews--no-js .reviews__control {
-//   display: none;
-// }
+.reviews--no-js .reviews__item {
+  margin-bottom: 60px;
+}
+
+.reviews--no-js .reviews__control {
+  display: none;
+}
 
 .reviews__wrapper {
   @include wrapper;
@@ -43,7 +46,7 @@
 .reviews__item {
   position: relative;
 
-  display: none;
+  display: flex;
 
   &--active {
     display: flex;
