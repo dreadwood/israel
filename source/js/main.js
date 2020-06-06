@@ -187,26 +187,40 @@
   });
 
   // раздел отзывы
-  var reviewsSection = document.querySelector('.reviews');
-  var reviewsSlides = document.querySelectorAll('.reviews__item');
-  var reviewsCounter = document.querySelector('.reviews__counter');
-  var reviewsButtonPrev = document.querySelector('.control__button--prev');
-  var reviewsButtonNext = document.querySelector('.control__button--next');
+  // var reviewsSection = document.querySelector('.reviews');
+  // var reviewsSlides = document.querySelectorAll('.reviews__item');
+  // var reviewsCounter = document.querySelector('.reviews__counter');
+  // var reviewsButtonPrev = document.querySelector('.control__button--prev');
+  // var reviewsButtonNext = document.querySelector('.control__button--next');
 
-  var currentReviewsSlide = 0;
+  // var currentReviewsSlide = 0;
 
-  var changeSlides = function (evt) {
-    reviewsSlides[currentReviewsSlide].classList.remove('reviews__item--active');
-    currentReviewsSlide = (evt.target === reviewsButtonPrev)
-      ? (currentReviewsSlide - 1) % reviewsSlides.length
-      : (currentReviewsSlide + 1) % reviewsSlides.length;
+  // var changeSlides = function (evt) {
+  //   reviewsSlides[currentReviewsSlide].classList.remove('reviews__item--active');
+  //   currentReviewsSlide = (evt.target === reviewsButtonPrev)
+  //     ? (currentReviewsSlide - 1) % reviewsSlides.length
+  //     : (currentReviewsSlide + 1) % reviewsSlides.length;
 
-    reviewsSlides[currentReviewsSlide].classList.add('reviews__item--active');
-    reviewsCounter.textContent = (currentReviewsSlide + 1) + ' / ' + reviewsSlides.length;
-  };
+  //   reviewsSlides[currentReviewsSlide].classList.add('reviews__item--active');
+  //   reviewsCounter.textContent = (currentReviewsSlide + 1) + ' / ' + reviewsSlides.length;
+  // };
 
-  reviewsSection.classList.remove('reviews--no-js');
+  // reviewsSection.classList.remove('reviews--no-js');
 
-  reviewsButtonNext.addEventListener('click', changeSlides);
-  reviewsButtonPrev.addEventListener('click', changeSlides);
+  // reviewsButtonNext.addEventListener('click', changeSlides);
+  // reviewsButtonPrev.addEventListener('click', changeSlides);
+  var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
 })();
