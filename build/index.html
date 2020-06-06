@@ -290,11 +290,11 @@
     </section>
 
     <section class="reviews reviews--no-js">
-      <div class="reviews__wrapper">
+      <div class="reviews__wrapper swiper-container">
         <h2 class="reviews__title title">Отзывы</h2>
 
-        <div class="reviews__list">
-          <div class="reviews__item reviews__item--active">
+        <div class="reviews__list swiper-wrapper">
+          <div class="reviews__item swiper-slide">
             <picture>
               <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
               <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
@@ -340,7 +340,7 @@
               </ul>
             </div>
           </div>
-          <div class="reviews__item">
+          <div class="reviews__item swiper-slide">
             <picture>
               <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
               <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
@@ -386,7 +386,7 @@
               </ul>
             </div>
           </div>
-          <div class="reviews__item">
+          <div class="reviews__item swiper-slide">
             <picture>
               <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
               <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
@@ -432,7 +432,7 @@
               </ul>
             </div>
           </div>
-          <div class="reviews__item">
+          <div class="reviews__item swiper-slide">
             <picture>
               <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
               <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
@@ -478,7 +478,7 @@
               </ul>
             </div>
           </div>
-          <div class="reviews__item">
+          <div class="reviews__item swiper-slide">
             <picture>
               <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
               <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
@@ -524,7 +524,7 @@
               </ul>
             </div>
           </div>
-          <div class="reviews__item">
+          <div class="reviews__item swiper-slide">
             <picture>
               <source type="image/webp" media="(max-width:768px)" srcset="img/reviews-olga-mobile@1x.webp 1x, img/reviews-olga-mobile@2x.webp 2x">
               <source type="image/webp" srcset="img/reviews-olga-desktop@1x.webp 1x, img/reviews-olga-desktop@2x.webp 2x">
@@ -573,14 +573,14 @@
         </div>
 
         <div class="reviews__control">
-          <p class="reviews__counter">1 / 6</p>
+          <p class="reviews__counter swiper-pagination">1 / 6</p>
           <div class="reviews__control-button control">
-            <button class="control__button control__button--prev" type="button" aria-label="Предыдущий слайд">
+            <button class="control__button control__button--prev swiper-button-prev" type="button" aria-label="Предыдущий слайд">
               <svg width="11" height="18">
                 <use xlink:href="#icon-arrow-slider"></use>
               </svg>
             </button>
-            <button class="control__button control__button--next" type="button" aria-label="Следующий слайд">
+            <button class="control__button control__button--next swiper-button-next" type="button" aria-label="Следующий слайд">
               <svg width="11" height="18">
                 <use xlink:href="#icon-arrow-slider"></use>
               </svg>
@@ -749,7 +749,6 @@
   </section>
 
   <script src="js/vendor.js"></script>
-  <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
