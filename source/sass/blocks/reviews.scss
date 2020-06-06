@@ -19,7 +19,7 @@
 
 .reviews--no-js .reviews__item {
   display: flex;
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
 }
 
 // .reviews--no-js .reviews__control {
@@ -118,12 +118,15 @@
   position: absolute;
   left: 406px;
   bottom: 107px;
+  z-index: 10;
 
   display: flex;
   align-items: center;
 }
 
 .reviews__counter {
+  position: static;
+
   min-width: 36px;
   margin: 0;
   margin-right: 14px;
@@ -152,7 +155,7 @@
   }
 
   .reviews__wrapper {
-    padding: 28px 0 37px 0;
+    padding: 28px 0 17px 0;
   }
 
   .reviews__title {
@@ -171,7 +174,7 @@
   }
 
   .reviews__content {
-    width: 100%;
+    width: auto;
     padding: 58px 16px 40px 16px;
   }
 
