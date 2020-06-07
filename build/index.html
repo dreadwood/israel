@@ -170,9 +170,9 @@
       <div class="live__wrapper">
         <h2 class="live__title title">Жизнь в&nbsp;Израиле</h2>
         <p class="live__text">Помимо учёбы, в рамках программе у&nbsp;вас будет возможность путешествовать по стране и&nbsp;познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
-        <div class="live__list-wrapper">
-          <ul class="live__list">
-            <li class="live__item live__item--tour live__item--active">
+        <div class="live__list-wrapper swiper-container">
+          <div class="live__list swiper-wrapper">
+            <div class="live__item live__item--tour swiper-slide">
               <picture>
                 <source type="image/webp" media="(max-width:768px)" srcset="img/live-tour-mobile@1x.webp 1x, img/live-tour-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/live-tour-desktop@1x.webp 1x, img/live-tour-desktop@2x.webp 2x">
@@ -181,9 +181,9 @@
                 <!-- 1х: 482px; 2x: 964px -->
                 <img class="live__item-img" src="img/live-tour-desktop@1x.png" srcset="img/live-tour-desktop@2x.png 2x" width="482" height="732" alt="Фотография храма">
               </picture>
-              <p class="live__item-text">Экскурсии по Израилю и&nbsp;знакомство с его историей</p>
-              </li>
-            <li class="live__item live__item--hebrew">
+              <p class="live__item-text">Экскурсии по Израилю и&nbsp;знакомство&nbsp;с&nbsp;его&nbsp;историей</p>
+              </div>
+            <div class="live__item live__item--hebrew swiper-slide">
               <picture>
                 <source type="image/webp" media="(max-width:768px)" srcset="img/live-hebrew-mobile@1x.webp 1x, img/live-hebrew-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/live-hebrew-desktop@1x.webp 1x, img/live-hebrew-desktop@2x.webp 2x">
@@ -193,8 +193,8 @@
                 <img class="live__item-img" src="img/live-hebrew-desktop@1x.png" srcset="img/live-hebrew-desktop@2x.png 2x" width="211" height="318" alt="Мужчина учит Иврит">
               </picture>
               <p class="live__item-text">Изучение иврита</p>
-            </li>
-            <li class="live__item live__item--learn">
+            </div>
+            <div class="live__item live__item--learn swiper-slide">
               <picture>
                 <source type="image/webp" media="(max-width:768px)" srcset="img/live-learn-mobile@2x.webp 1x, img/live-learn-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/live-learn-desktop@1x.webp 1x, img/live-learn-desktop@2x.webp 2x">
@@ -203,9 +203,9 @@
                 <!-- 1х: 411px; 2x: 822px -->
                 <img class="live__item-img" src="img/live-learn-desktop@1x.png" srcset="img/live-learn-desktop@2x.png 2x" width="411" height="318" alt="Двое мужчин смотрят проект на компьютере">
               </picture>
-              <p class="live__item-text">Обучение современным навыкам и профессиям</p>
-            </li>
-            <li class="live__item live__item--project">
+              <p class="live__item-text">Обучение современным навыкам&nbsp;и&nbsp;профессиям</p>
+            </div>
+            <div class="live__item live__item--project swiper-slide">
               <picture>
                 <source type="image/webp" media="(max-width:768px)" srcset="img/live-project-mobile@1x.webp 1x, img/live-project-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/live-project-desktop@1x.webp 1x, img/live-project-desktop@2x.webp 2x">
@@ -215,8 +215,8 @@
                 <img class="live__item-img" src="img/live-project-desktop@1x.png" srcset="img/live-project-desktop@2x.png 2x" width="411" height="318" alt="Трое молодых людей улыбаются">
               </picture>
               <p class="live__item-text">Совместные творческие проекты с израильской молодёжью</p>
-            </li>
-            <li class="live__item live__item--development">
+            </div>
+            <div class="live__item live__item--development swiper-slide">
               <picture>
                 <source type="image/webp" media="(max-width:768px)" srcset="img/live-development-mobile@1x.webp 1x, img/live-development-mobile@2x.webp 2x">
                   <source type="image/webp" srcset="img/live-development-desktop@1x.webp 1x, img/live-development-desktop@2x.webp 2x">
@@ -226,15 +226,9 @@
                 <img class="live__item-img" src="img/live-development-desktop@1x.png" srcset="img/live-development-desktop@2x.png 2x" width="214" height="318" alt="Человек на фоне заката">
               </picture>
               <p class="live__item-text">Развитие лидерства</p>
-            </li>
-          </ul>
-          <div class="live__control-list">
-            <button class="live__control-item live__control-item--active" aria-label="1 слайд"></button>
-            <button class="live__control-item" aria-label="2 слайд"></button>
-            <button class="live__control-item" aria-label="3 слайд"></button>
-            <button class="live__control-item" aria-label="4 слайд"></button>
-            <button class="live__control-item" aria-label="5 слайд"></button>
+            </div>
           </div>
+          <div class="live__control-list swiper-pagination"></div>
         </div>
       </div>
     </section>
