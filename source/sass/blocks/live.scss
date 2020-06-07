@@ -8,6 +8,17 @@
   font-style: normal;
   text-align: right;
   color: transparentize($main-black, 0.13);
+
+  background-image:
+    url("../img/bg-watch-desktop@1x.png"),
+    url("../img/watercolor-live-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position:
+    right 0 bottom 240px,
+    left 0 bottom 97px;
+  background-size:
+    auto auto,
+    100% auto;
 }
 
 .live__wrapper {
@@ -16,7 +27,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 44px 18px 128px 18px;
+  // padding: 44px 18px 128px 18px;
+  padding: 44px 18px 9.4%;
 }
 
 .live__title {
@@ -30,6 +42,11 @@
   width: 720px;
   margin: 0;
   margin-bottom: 46px;
+
+  //
+  position: relative;
+  z-index: 10;
+  margin-left: -23px;
 }
 
 .live__list-wrapper {
@@ -39,6 +56,9 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   width: 100%;
+
+  //
+  overflow: visible;
 }
 
 .live__list {
@@ -66,13 +86,16 @@
   color: $white;
   text-shadow: 0 1px 4px transparentize($black, 0.88);
 
+  //
+  height: auto;
+
   &--tour {
     position: absolute;
     top: -9.6%;
-    left: -10px;
+    left: -76%;
     z-index: -1;
 
-    width: 42.5%;
+    width: 74.5%;
   }
 
   &--hebrew {
@@ -119,17 +142,20 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .live--no-js .live__item {
-    display: flex;
-    margin-bottom: 30px;
+  .live {
+    background-image: none;
   }
 
-  .live--no-js .live__control-list {
-    display: none;
+  .live--no-js .live__list{
+    flex-wrap: wrap;
+  }
+
+  .live--no-js .live__item {
+    display: flex;
   }
 
   .live__wrapper {
-    padding: 39px 16px 50px 16px;
+    padding: 39px 16px 39px 16px;
   }
 
   .live__title {
@@ -139,6 +165,7 @@
   .live__text {
     width: auto;
     margin-bottom: 24px;
+    margin-left: 0;
 
     font-size: 16px;
     line-height: 26px;
@@ -147,30 +174,30 @@
 
   .live__list-wrapper {
     justify-content: center;
+
+    //
+    overflow: hidden;
   }
 
   .live__list {
     position: relative;
     width: 100%;
     margin-bottom: 15px;
+
+    display: flex;
+    flex-wrap: nowrap;
   }
 
   .live__item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-
     display: flex;
     justify-content: center;
-    margin-bottom: 0;
+    flex-shrink: 0;
+    height: fit-content;
+    margin-bottom: 19px;
 
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-
-    opacity: 0;
-    transition: opacity 1s ease-in;
 
     &--tour {
       position: static;
@@ -193,11 +220,6 @@
     &--development {
       width: 100%;
     }
-
-    &--active {
-      z-index: 2;
-      opacity: 1;
-    }
   }
 
   .live__item picture {
@@ -206,6 +228,9 @@
 
   .live__item-text {
     padding: 10px 30px 24px 30px;
+
+    font-size: 5.7vw;
+    line-height: 6.65vw;
   }
 
   .live__control-list {
@@ -223,6 +248,7 @@
     background-color: transparentize($main-black, 0.8);
     border: 1px solid $white;
     border-radius: 50%;
+    cursor: pointer;
 
     &:last-child {
       margin-right: 0;

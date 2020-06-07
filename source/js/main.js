@@ -156,22 +156,39 @@
 
   // Раздел жизнь в Израиле
   var liveSection = document.querySelector('.live');
-  var liveSlides = document.querySelectorAll('.live__item');
-  var liveControlsSlides = document.querySelectorAll('.live__control-item');
-
-  var currentLiveSlide = 0;
-
-  var nextSlide = function () {
-    liveSlides[currentLiveSlide].classList.remove('live__item--active');
-    liveControlsSlides[currentLiveSlide].classList.remove('live__control-item--active');
-    currentLiveSlide = (currentLiveSlide + 1) % liveSlides.length;
-    liveSlides[currentLiveSlide].classList.add('live__item--active');
-    liveControlsSlides[currentLiveSlide].classList.add('live__control-item--active');
-  };
+  var liveSlider = null;
 
   liveSection.classList.remove('live--no-js');
 
-  setInterval(nextSlide, LIVE_SLIDER_TIMING);
+  var activeSwiper = function () {
+    liveSlider = new Swiper('.live__list-wrapper', {
+      direction: 'horizontal',
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        bulletClass: 'live__control-item',
+        bulletActiveClass: 'live__control-item--active',
+      },
+    });
+  };
+
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    activeSwiper();
+  }
+
+  window.addEventListener('resize', function () {
+    var viewport = document.documentElement.clientWidth;
+    if (viewport < 768 && !liveSlider) {
+      activeSwiper();
+    } else if (viewport >= 768 && liveSlider) {
+      liveSlider.destroy();
+      liveSlider = null;
+    }
+  });
 
   // раздел FAQ
   var faqSection = document.querySelector('.faq');
