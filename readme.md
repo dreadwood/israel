@@ -1,5 +1,5 @@
 # Проект «Израиль» Акселератора [HTML academy](https://l.htmlacademy.ru/accelerator)
-~~Выполнил~~ выполняет [Sergey Bykov](https://htmlacademy.ru/profile/dreadboy)
+Выполнил [Sergey Bykov](https://htmlacademy.ru/profile/dreadboy)
 
 Все разработка ведёться в директории `source`
 
