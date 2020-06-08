@@ -89,6 +89,7 @@
 }
 
 .curator__photo {
+  display: block;
   margin-right: 24px;
 
   border-radius: 50%;
@@ -176,7 +177,7 @@
   }
 
   .curator__photo {
-    margin-bottom: 9px;
+    margin-bottom: 18px;
   }
 
   .curator__person-wrapper {

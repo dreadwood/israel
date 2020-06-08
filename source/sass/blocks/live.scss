@@ -27,7 +27,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  // padding: 44px 18px 128px 18px;
   padding: 44px 18px 9.4%;
 }
 
@@ -39,13 +38,12 @@
 }
 
 .live__text {
+  position: relative;
+  z-index: 10;
+
   width: 720px;
   margin: 0;
   margin-bottom: 46px;
-
-  //
-  position: relative;
-  z-index: 10;
   margin-left: -23px;
 }
 
@@ -57,7 +55,6 @@
   flex-wrap: wrap;
   width: 100%;
 
-  //
   overflow: visible;
 }
 
@@ -75,6 +72,7 @@
 
   display: flex;
   align-items: flex-end;
+  height: auto;
   margin-bottom: 30px;
 
   font-family: $font-img;
@@ -85,9 +83,6 @@
   text-align: left;
   color: $white;
   text-shadow: 0 1px 4px transparentize($black, 0.88);
-
-  //
-  height: auto;
 
   &--tour {
     position: absolute;
@@ -146,7 +141,7 @@
     background-image: none;
   }
 
-  .live--no-js .live__list{
+  .live--no-js .live__list {
     flex-wrap: wrap;
   }
 
@@ -175,7 +170,6 @@
   .live__list-wrapper {
     justify-content: center;
 
-    //
     overflow: hidden;
   }
 

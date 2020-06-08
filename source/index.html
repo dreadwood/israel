@@ -624,8 +624,12 @@
 
         <div class="curator__map">
           <picture>
-            <source type="image/webp" srcset="img/map-desktop@1x.webp 1x">
-            <img class="curator__map-img" src="img/map-desktop@1x.png" width="702" height="448" alt="Карта офиса: Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
+            <source type="image/webp" media="(max-width:768px)" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+            <!-- 1х: 240px; 2x: 480px -->
+            <source media="(max-width:767px)" srcset="img/map-mobile@1x.png 1x, img/map-mobile@2x.png 2x">
+            <!-- 1х: 364px; 2x: 728px -->
+            <img class="curator__map-img" src="img/map-desktop@1x.png" srcset="img/map-desktop@2x.png 2x" width="702" height="448" alt="Карта офиса: Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
           </picture>
         </div>
       </div>

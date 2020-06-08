@@ -1,10 +1,6 @@
 .page-header {
   @include wrapper;
 
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // padding: 32px 19px 10px 15px;
   width: 100%;
 
   font-family: $font-deafult;
@@ -36,6 +32,10 @@
   }
 }
 
+.page-header__logo {
+  margin-right: 27px;
+}
+
 .page-header__link {
   padding: 0;
 
@@ -60,14 +60,6 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .page-header {
-    // position: relative;
-
-    // flex-direction: column;
-    // align-items: flex-end;
-    // padding: 20px 9px 10px 16px;
-  }
-
   .page-header__wrapper {
     position: relative;
 
@@ -83,15 +75,17 @@
     line-height: 17px;
   }
 
-  .page-header__logo img {
-    width: 120px;
-    height: 42px;
-  }
-
   .page-header__logo {
     position: absolute;
     top: 20px;
     left: 16px;
+
+    margin-right: 0;
+  }
+
+  .page-header__logo img {
+    width: 120px;
+    height: 42px;
   }
 
   .page-header__link {

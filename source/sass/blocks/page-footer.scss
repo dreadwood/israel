@@ -18,11 +18,12 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 26px 19px 17px 14px;
+  padding: 25px 19px 17px 14px;
 }
 
 .page-footer__copyright {
   margin: 0;
+  margin-left: 31px;
 
   opacity: 0.5;
 }
@@ -39,6 +40,7 @@
 
   .page-footer__copyright {
     margin-bottom: 28px;
+    margin-left: 0;
   }
 
   .page-footer__social-list {
