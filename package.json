@@ -43,7 +43,7 @@
     "posthtml-include": "1.2.0",
     "push-dir": "0.4.1",
     "sass": "1.55.0",
-    "stylelint": "9.10.1",
+    "stylelint": "14.13.0",
     "stylelint-config-htmlacademy": "0.1.12"
   }
 }
