@@ -7,7 +7,8 @@
     "build": "gulp build",
     "start": "gulp start",
     "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "sprite": "gulp sprite",
+    "gh-pages": "push-dir --dir=build --branch=gh-pages"
   },
   "browserslist": [
     "last 4 versions",
@@ -40,6 +41,7 @@
     "gulp-svgstore": "7.0.1",
     "gulp-webp": "4.0.1",
     "posthtml-include": "1.2.0",
+    "push-dir": "0.4.1",
     "sass": "1.55.0",
     "stylelint": "9.10.1",
     "stylelint-config-htmlacademy": "0.1.12"
